@@ -1,0 +1,62 @@
+Q.1. How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+A.1. In order to better develop a project one might need to consult what was done earlier needing a history of the project. Similarly many changes are being made to the project and differences between 2 stages might be useful. Also in case of a collaborative project development different ppl make different changes, to keep track we need history of the project.
+
+Q.2. What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google docs does? 
+
+A.2. pros -> manual saving lets user decide what changes to be saved .
+			 avoids clutering of the history.
+			 with practice user gets better at dealing with bug fixing saving.
+	 cons -> user control implies user error.
+	 		 might miss out on some fixation which might be a big deal.
+
+Q.3. Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
+
+A.3. to serve a single purpose we might need different files working in sync, since git saves the snapshot of all the files in a repository it is actually useful to have the set of files together instead of dealing separately.
+
+Q.4. How can you use the commands git log and git diff to view the history of files?
+
+A.4 "git log" shows the list of previous commits. this is necessary and can be used to see what canges were made when commit occured as when ever u make a commit a small description is asked.
+"git diff " acts exactly like "diff" in linux ican tell the difference between two commits taken place.what changes took place.
+
+Git Errors and Warnings Solution
+
+Should not be doing an octopus 
+Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if you try to use this strategy in an inappropriate situation.
+
+You are in 'detached HEAD' state 
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened) 
+This is a real error message, but it’s not output by Git. Instead it’s output by GHC, the compiler for a programming language called Haskell. It’s reserved for particularly surprising errors!
+
+Q.5. How might using version control make you more confident to make changes that could break something?
+
+A.5. freedom to implement whatever u feel like and in turn change how ever u feel like. with version-control its always an option to go back and check what was the case before and now.in short its really cool !! :D 
+
+Q.6. Now that you have your workspace set up, what do you want to try using Git for?
+
+A.6. collaborative working, new projects,variety of new tools to use...
+
+If someone else gives you the location of their directory or repository, you can copy or clone it to your own computer.
+
+This is true for both copying a directory and cloning a repository.
+
+As you saw in the previous lesson, if you have a URL to a repository, you can copy it to your computer using git clone.
+
+For copying a directory, you weren't expected to know this, but it is possible to copy a directory from one computer to another using the command scp, which stands for "secure copy". The name was chosen because the scp command lets you securely copy a directory from one computer to another. 
+
+
+The history of changes to the directory or repository is copied.
+
+This is true for cloning a repository, but not for copying a directory. The main reason to use git clone rather than copying the directory is because git clone will also copy the commit history of the repository. However, copying can be done on any directory, whereas git clone only works on a Git repository. 
+
+
+If you make changes to the copied directory or cloned repository, the original will not change.
+
+This is true for both copying a directory and cloning a repository. In both cases, you're making a copy that you can alter without changing the original. 
+
+
+The state of every file in the directory or repository is copied.
+
+This is true for both copying a directory and cloning a repository. In both cases, all the files are copied.
