@@ -1,2 +1,5 @@
 Q.1 What happens when you initialize a repository? Why do you need to do it?
 A.1 on initialising t a repo git creates a .git file which will act as a local repository for the user to make changes,erform commits on. Initially it has 0 commits and does not include any file in the repository. one has to use git add <file name> to take that particular file to staging area and then perform git commit to make sure snapshot is saved in the repository.
+
+Q.2 How is the staging area different from the working directory and the repository? What value do you think it offers?
+A.2 there may be multiple redundant files in the working directory which u might not wanna add to the git repository. staging area is an intermediate stage between git repository and working directory which allows user to identify which files need to be there. before a commit takes place each file is put in staging area,changes are performed and then commit takes place.
