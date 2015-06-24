@@ -3,3 +3,20 @@ A.1 on initialising t a repo git creates a .git file which will act as a local r
 
 Q.2 How is the staging area different from the working directory and the repository? What value do you think it offers?
 A.2 there may be multiple redundant files in the working directory which u might not wanna add to the git repository. staging area is an intermediate stage between git repository and working directory which allows user to identify which files need to be there. before a commit takes place each file is put in staging area,changes are performed and then commit takes place.
+
+Q.3 How can you use the staging area to make sure you have one commit per logical change?
+
+A.3 by using "git add <file name>" we may add a file name to the staging area and before committing this file to the repository we may use "git diff --staged" to check the difference between the latest commit version of the file and the file we are about to commit. this will ensure we are making the right changes. we may add single file to staging area for better ease in understanding what we are doing.
+
+Q.4 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+A.4 branches will help you try out cool stuff with ur project without being scared to get back or to revert the changes incase the changes u intended fail. this is an awesome feature by git.
+
+Q.5 How do the diagrams help you visualize the branch structure?
+
+A.5 diagrams act as fishbone structure and help in visualising the git commits that took place in a particular branch. this removes user from any confusion regarding commits. :D 
+
+Q.6 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+A.6 it might be the case that we want to finally merge the branch with a special feature to the main branch so as to avoid "checking out" after all that was the purpose all along. this is the purpose of merge.
+after merging when "git log" is called the commits occur in most recent order according to respective timestamps. so to see changes made in a particular commit we can call "git show <commit id>" instead of git diff.
