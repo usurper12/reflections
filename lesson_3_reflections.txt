@@ -1,1 +1,56 @@
 Q.1 When would you want to use a remote repository rather than keeping all your work local?
+
+A.1 in order to sync ur work with the internet and make other developer view and use ur project we need to use GIThub..github doesnt allow git clone on its servers so we require "remotes", these empty repositories help the user to pull and push the local repositories on to GitHub itself.
+
+###
+remotes on your local repository are a reference to another repository.
+
+git remote -> lists existing remotes 
+
+git remote add origin <URL> -> this will create a remote named origin 
+with repository on github .
+
+git push origin <branch> -> this will push the commit history onto 
+github with remote as "origin" and whatever branch you wanna push
+###
+
+
+Q.2 Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+
+A.2 remote repositories are needed by Github to push and pull from and to local repository. Manually operating the push and pull makes sure that a repo is pushed on to GitHub server only when the developer thinks that his work is complete and ready to be shared. Incase this was done automatically, we would not only be wasting a lot of time but space as well. 
+
+###
+git pull origin <branch> -> this is used to pull the branch from gitub onto the local machine using remote "origin". this will be required incase user added a file directly on github and committed the changes on the branch.
+###
+
+Q.3 Describe the differences between forks, clones, and branches.  When would you use one instead of another?
+
+A.3 Branches happen on a single repository. we can pull and push branches. cloning is a process of making a copy of an already existing repository it can be either on your local machine itself or you may clone a repository from gitHub to your local machine for further changes. Fork is just another term for cloning GitHub repository onto another gitHub repository using its built in function.
+
+Q.4 What is the benefit of having a copy of the last known state of the remote stored locally?
+
+A.4 Having a local copy helps user use git diff and find out what changes have been made by other users of the repository. this will prove important in case of a live project .. if user might want to go back to the origin/master state.
+
+###
+Cloning sets up a remote automatically for you.
+
+Git stores the local copies of all the remote branches.
+you also get a local copy of the last known position of that branch on that remote. ex -> origin/master
+
+incase of push and pull both master and origin/master get updated.BUT for conflicting changes such as locally commit and commit on Github, "git fetch" is used to only update origin/master
+
+git pull origin master = git fetch origin + git merge master origin/master. 
+
+fast forward merges are performed when we are trying to merge 2 labels but 1 of them is already in the ancestory of the other. In this case we simply shift the label to the end instead of adding another label.
+
+merging with the button on GitHub will always make a new commit and not care about fast forward merge
+###
+
+Q.5 How would you collaborate without using Git or GitHub?  What would be easier,and what would be harder?
+
+A.5 having learned the basics of github it now seems very tedious to collaborate with people outside one's organisation. with github acting as acommon stage where people can add and fix a part at a time and view the changes it becomes very easy to work everything at the same place with little work without the risk of ruining the original project.
+it wouldve been very difficult had there not been version-controls like GitHub . sharing your work with collaborator wouldve equired sending over the complete file everytime one made a change .
+
+Q.6 When would you want to make changes in a separate branch rather than directly in master?  What benefits does each approach have?
+
+A.6 master branch is usually considered as the main project branch and in a collaborative environment where different users want different functionality they use different branches to add a different feature to the main master branch. in real projects after adding a specific feature a pull request is made which can be seen by project managers who decide whether to merge the branch with master or not. 
